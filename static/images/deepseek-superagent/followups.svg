@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+<title id="title">新请求与后续评论的不同处理路线</title><desc id="desc">新请求通过 Eval 审查，授权后创建 Ticket；后续评论通过 Subscription 直接进入已有 Ticket，但不扩大任务权限</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1729"/><stop offset="1" stop-color="#20324a"/></linearGradient><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#7dd3fc"/></marker><marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#5eead4"/></marker></defs>
+<rect width="1200" height="650" rx="22" fill="url(#bg)"/>
+<g font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,Arial,sans-serif">
+<text x="58" y="73" font-size="34" fill="#fff" font-weight="750">最值得看懂的分叉：新请求 ≠ 老任务的后续评论</text><text x="58" y="111" font-size="19" fill="#aac3d6">是否需要重新授权，决定了事件被送往哪里</text>
+<rect x="57" y="160" width="1085" height="168" rx="22" fill="#1b354d" stroke="#3b6681"/>
+<rect x="80" y="183" width="125" height="40" rx="20" fill="#315977"/><text x="142" y="210" font-size="19" fill="#d9f0ff" text-anchor="middle">新请求</text>
+<rect x="240" y="220" width="214" height="64" rx="14" fill="#254b68"/><text x="347" y="260" font-size="21" fill="white" text-anchor="middle">Issue / @Agent</text>
+<rect x="536" y="220" width="222" height="64" rx="14" fill="#254b68"/><text x="647" y="260" font-size="21" fill="white" text-anchor="middle">Gate + Eval</text>
+<rect x="839" y="220" width="250" height="64" rx="14" fill="#2f6c67"/><text x="964" y="260" font-size="21" fill="white" text-anchor="middle">新 Ticket + Mandate</text>
+<path d="M454 252H532M758 252H835" stroke="#7dd3fc" stroke-width="3" fill="none" marker-end="url(#a)"/>
+<rect x="57" y="354" width="1085" height="174" rx="22" fill="#153b3d" stroke="#357d73"/>
+<rect x="80" y="378" width="125" height="40" rx="20" fill="#28645e"/><text x="142" y="405" font-size="19" fill="#d3fff4" text-anchor="middle">后续评论</text>
+<rect x="240" y="420" width="214" height="65" rx="14" fill="#235753"/><text x="347" y="461" font-size="20" fill="#fff" text-anchor="middle">PR 评论 / CI</text>
+<rect x="536" y="420" width="222" height="65" rx="14" fill="#235753"/><text x="647" y="461" font-size="20" fill="#fff" text-anchor="middle">Subscription</text>
+<rect x="839" y="420" width="250" height="65" rx="14" fill="#2f6c67"/><text x="964" y="461" font-size="20" fill="#fff" text-anchor="middle">回到原 Ticket</text>
+<path d="M454 453H532M758 453H835" stroke="#5eead4" stroke-width="3" fill="none" marker-end="url(#b)"/>
+<text x="58" y="584" font-size="21" fill="#f7ce87" font-weight="700">注意：</text><text x="133" y="584" font-size="19" fill="#d9e8f0">订阅负责延续上下文，不代表后续消息自动获得新的执行授权。</text><text x="58" y="616" font-size="17" fill="#91b3c9">示意图基于源码中的 Intake / Evals / Tickets / Subscription 设计。</text>
+</g></svg>
